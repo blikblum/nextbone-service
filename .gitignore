@@ -26,6 +26,3 @@ node_modules
 bower_components
 coverage
 tmp
-
-# Users Environment Variables
-.lock-wscript

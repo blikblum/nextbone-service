@@ -33,22 +33,8 @@ describe('Service', function () {
   })
 
   it('should call start() before calling the function', function () {
-    // toHaveBeenCalledBefore is not accurate. https://github.com/jest-community/jest-extended#tohavebeencalledbefore
-    // waiting for Jest 23: https://github.com/facebook/jest/pull/5867
-    let callTick = 0
-    let startCallTick, fooCallTick
-    myService.start.mockImplementation(() => {
-      startCallTick = callTick
-      callTick++
-    })
-
-    myService.foo.mockImplementation(() => {
-      fooCallTick = callTick
-      callTick++
-    })
     return myService.request('foo').then(() => {
-      // expect(myService.start).toHaveBeenCalledBefore(myService.foo)
-      expect(startCallTick).toBeLessThan(fooCallTick)
+      expect(myService.start).toHaveBeenCalledBefore(myService.foo)
     })
   })
 

@@ -26,13 +26,12 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-jest": "^22.4.3",
+    "babel-jest": "^23.0.1",
     "babel-preset-env": "^1.7.0",
     "backbone": "^1.3.3",
     "backbone.radio": "^2.0.0",
     "del": "^3.0.0",
-    "jest": "^22.4.3",
-    "jest-extended": "^0.7.2",
+    "jest": "^23.0.1",
     "rollup": "^0.58.2",
     "rollup-plugin-babel": "^3.0.4",
     "standard": "^11.0.1",
@@ -73,9 +72,11 @@
         ]
       }
     }
-  },  
+  },
   "jest": {
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"],
-    "setupTestFrameworkScriptFile": "jest-extended"
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setupTests.js"
   }
 }

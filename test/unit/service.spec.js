@@ -1,23 +1,28 @@
-import Service from '../../src/index'
+/* eslint-env jest */
+import { Service } from '../../src/index'
 
 describe('Service', function () {
   let myService
   beforeEach(function () {
-    const MyService = Service.extend({
-      setup: jest.fn(),
-      start: jest.fn(),
-      onError: jest.fn(),
+    const MyService = class extends Service {
+      static get requests () {
+        return {
+          foo: 'foo',
+          bar: 'bar2'
+        }
+      }
 
-      requests: {
-        foo: 'foo',
-        bar: 'bar2'
-      },
-
-      foo: jest.fn(),
-      bar2: jest.fn()
-    })
+      foo () {}
+      bar2 () {}
+    }
 
     myService = new MyService()
+
+    jest.spyOn(myService, 'setup')
+    jest.spyOn(myService, 'start')
+    jest.spyOn(myService, 'onError')
+    jest.spyOn(myService, 'foo')
+    jest.spyOn(myService, 'bar2')
   })
 
   it('should bind requests where the key and value match', function () {

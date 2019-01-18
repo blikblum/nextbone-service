@@ -1,82 +1,51 @@
 {
-  "name": "radio.service",
+  "name": "radio-service",
   "version": "0.6.0",
   "description": "",
-  "main": "dist/radio.service.js",
-  "module": "dist/radio.service.esm.js",
-  "jsnext:main": "dist/radio.service.esm.js",
+  "main": "dist/radio-service.js",
+  "module": "dist/radio-service.js",
   "scripts": {
     "test": "jest",
     "build": "node tools/build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blikblum/radio.service.git"
+    "url": "https://github.com/blikblum/radio-service.git"
   },
   "keywords": [],
-  "author": "James Kyle <me@thejameskyle.com>",
-  "contributors": [
-    "Luiz Américo Pereira Câmara"
-  ],
+  "author": "Luiz Américo Pereira Câmara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blikblum/radio.service/issues"
+    "url": "https://github.com/blikblum/radio-service/issues"
   },
-  "homepage": "https://github.com/blikblum/radio.service",
+  "homepage": "https://github.com/blikblum/radio-service",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.0.1",
-    "babel-preset-env": "^1.7.0",
-    "backbone": "^1.3.3",
-    "backbone.radio": "^2.0.0",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-jest": "^24.0.0-alpha.12",
     "del": "^3.0.0",
-    "jest": "^23.0.1",
-    "rollup": "^0.58.2",
-    "rollup-plugin-babel": "^3.0.4",
-    "standard": "^11.0.1",
-    "underscore": "^1.9.0"
+    "jest": "^24.0.0-alpha.12",
+    "nextbone": "^0.6.0",
+    "nextbone-radio": "^0.1.0",
+    "rollup": "^1.1.0",
+    "rollup-plugin-babel": "^4.0.1",
+    "standard": "^12.0.1",
+    "underscore": "^1.9.1"
   },
   "peerDependencies": {
-    "backbone": "^1.3.3",
-    "backbone.radio": "^2.0.0",
-    "underscore": "^1.8.3"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "ie 11",
-              "last 2 versions",
-              "Firefox ESR"
-            ]
-          },
-          "modules": false
-        }
-      ]
-    ],
-    "env": {
-      "test": {
-        "presets": [
-          [
-            "env",
-            {
-              "targets": {
-                "node": "current"
-              }
-            }
-          ]
-        ]
-      }
-    }
+    "nextbone-radio": "^0.1.0",
+    "underscore": "^1.9.1"
   },
   "jest": {
     "modulePathIgnorePatterns": [
       "<rootDir>/dist/"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setupTests.js"
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!nextbone).+\\.js$"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setupTests.js"
+    ]
   }
 }

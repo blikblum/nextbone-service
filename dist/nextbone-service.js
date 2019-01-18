@@ -49,4 +49,4 @@ class Service extends Channel {
 }
 
 export { Service };
-//# sourceMappingURL=radio-service.js.map
+//# sourceMappingURL=nextbone-service.js.map

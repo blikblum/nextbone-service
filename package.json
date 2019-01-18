@@ -1,24 +1,24 @@
 {
-  "name": "radio-service",
+  "name": "nextbone-service",
   "version": "0.6.0",
   "description": "",
-  "main": "dist/radio-service.js",
-  "module": "dist/radio-service.js",
+  "main": "dist/nextbone-service.js",
+  "module": "dist/nextbone-service.js",
   "scripts": {
     "test": "jest",
     "build": "node tools/build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blikblum/radio-service.git"
+    "url": "https://github.com/blikblum/nextbone-service.git"
   },
   "keywords": [],
   "author": "Luiz Américo Pereira Câmara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blikblum/radio-service/issues"
+    "url": "https://github.com/blikblum/nextbone-service/issues"
   },
-  "homepage": "https://github.com/blikblum/radio-service",
+  "homepage": "https://github.com/blikblum/nextbone-service",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",

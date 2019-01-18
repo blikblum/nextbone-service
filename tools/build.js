@@ -21,7 +21,7 @@ promise = promise.then(() => del(['dist/*']));
       exclude: 'node_modules/**'
     })]
   }).then(bundle => bundle.write({
-    file: `dist/radio-service.js`,
+    file: `dist/nextbone-service.js`,
     format,
     sourcemap: true
   })))
